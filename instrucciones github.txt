@@ -142,7 +142,7 @@ Mirara cuantas ramas hay ahora
 PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/Software (main)
 $ git branch
   login
-* main el asterisco indica que esta situado en main mas no en login
+* main el asterisco indica que esta situado en rama main mas no en login
 
 git checkout: permite cambiar de ramas.
 
