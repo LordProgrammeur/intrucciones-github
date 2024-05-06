@@ -2,16 +2,6 @@ crear archivo en escritorio
 crear repositorio en github con el mismo nombre de carpeta
 o crear un nuevo repositorio en la línea de comando
 echo "# pet-stylo" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/LordProgrammeur/pet-stylo.git
-git push -u origin main
-
-git remote add origin https://github.com/LordProgrammeur/pet-stylo.git
-git branch -M main
-git push -u origin main
 
 panel de control>cuentas>administrador de credenciales>credenciales de windows>quitar cuentas de github(indispensable hacerlo para enlazar cuenta)
 
@@ -66,7 +56,7 @@ $ git commit -m "actualizar carpeta"
  create mode 100644 docs/instrucciones github.txt
 
 AMBIENTE 201@DESKTOP-JM874TI MINGW64 ~/Desktop/pet-stylo (main)
-$ git push -u origin main
+$ git push -u origin main(si ya estan enlazadas las carpetas solo hacemos git push)
 Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
 Delta compression using up to 8 threads
@@ -79,10 +69,6 @@ To https://github.com/LordProgrammeur/pet-stylo.git
 branch 'main' set up to track 'origin/main'.
 
 clear para limpiar todo
-
-Video curso de git: https://www.youtube.com/watch?v=sH9g77J92ns
-
-Subir archivo de edicion y presentacion en github.
 
 Clonar proyecto:
 
@@ -100,3 +86,56 @@ $ git config --global user.email "david91ortiz14@gmail.com"
 (importannte)Para abrir de nuevo proyecto en pc de casa cuando se modificaron archivos en otro pc:
 Abrir la carpeta del proyecto y click derecho git bash  here e inmediatamente comando
 $git pull
+
+$ git add -A: envia todos los archivos a la vez. 
+
+$ git status: muestra lista de los archivos en el area de trabajo.
+	despues de que se modifica un archivo y se le da status sale modify.
+
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/Instrucciones github (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   instrucciones github.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+git checkout: permite cambiar de ramas.
+
+git branch -d: elimina una rama especifica del repositorio.
+
+git merge: permite unir una rama secundaria con una principal.
+
+Proteger rama master: dentro del repositorio ir a settings> branches > branch name pattern y escribir master > chulear primera opcion: require pull request review..... > chulear dismiss stale pull.... y require review from... > create
+
+Eliminar credenciales en git:$ git credentials-manager delete https://github.com/
+
+Ver nombre de usuario y email que figuran en git:$ git config --global user.name
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo (main)
+$ git config --global user.name
+LordProgrammeur
+
+Cambiar nombre de ususario en proyecto
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo (main)
+$ git config --global user.name "poner el nombre que se le quiere dar"
+
+Ver email de cuenta principal
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo (main)
+$ git config --global user.email
+david91ortiz14@gmail.com
+
+Cambiar email de cuenta principal
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo (main)
+$ git config --global user.email "ponel el email"
+david91ortiz14@gmail.com
+
+git branch: mirar que ramas hay en el repositorio.
+
+git branch nombre de nueva rama: crear nueva rama
+
+
+
