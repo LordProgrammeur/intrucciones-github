@@ -16,7 +16,7 @@ $ git init
 Initialized empty Git repository in C:/Users/AMBIENTE 314/Desktop/pet-stylo/.git/
 
 Cambiar a rama main
-
+-M 
 AMBIENTE 201@DESKTOP-JM874TI MINGW64 ~/Desktop/pet-stylo (master)
 $ git branch -M main
 
@@ -104,8 +104,6 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-git checkout: permite cambiar de ramas.
-
 git branch -d: elimina una rama especifica del repositorio.
 
 git merge: permite unir una rama secundaria con una principal.
@@ -137,5 +135,23 @@ git branch: mirar que ramas hay en el repositorio.
 
 git branch nombre de nueva rama: crear nueva rama
 
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/Software (main)
+$ git branch login
 
+Mirara cuantas ramas hay ahora
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/Software (main)
+$ git branch
+  login
+* main el asterisco indica que esta situado en main mas no en login
+
+git checkout: permite cambiar de ramas.
+
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/Software (main)
+$ git checkout login
+Switched to branch 'login'
+
+Enviar rama creada a repositorio original:
+git push --set-upstream origin login (login es el nombre de la rama)
+
+Cambiar nombre de rama: git branch ramita rama1 (ramita es el nombre anterior de la rama, rama1 es el nuevo nombre de la rama)
 
