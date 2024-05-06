@@ -153,5 +153,60 @@ Switched to branch 'login'
 Enviar rama creada a repositorio original:
 git push --set-upstream origin login (login es el nombre de la rama)
 
+Se actualiza y sale: Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'login' on GitHub by visiting:
+remote:      https://github.com/LordProgrammeur/pet-stylo/pull/new/login
+remote:
+To https://github.com/LordProgrammeur/pet-stylo.git
+ * [new branch]      login -> login
+branch 'login' set up to track 'origin/login'.
+
+Si queremos ver las modioficaciones que se han hecho: 
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/login-petstylo (login)
+$ git status
+Y sale: On branch login
+Your branch is up to date with 'origin/login'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   login.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Despúes se puede ir a modificar el codigo y > PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/login-petstylo (login)
+$ git add -A
+
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/login-petstylo (login)
+$ git commit -m "se esta probando con git"
+[login 3871ad1] se esta probando con git
+ 1 file changed, 1 insertion(+)
+
+PC-MASTER-DAVE@PC-MASTER-DAVE MINGW64 ~/Desktop/pet-stylo/login-petstylo (login)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 416 bytes | 416.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/LordProgrammeur/pet-stylo.git
+   f044c54..3871ad1  login -> login
+
+
 Cambiar nombre de rama: git branch ramita rama1 (ramita es el nombre anterior de la rama, rama1 es el nuevo nombre de la rama)
 
+Desligar archivo local de repositorio en github: entramos a la carpeta ligada> git bash> digitamos rm -rf .git
+
+Pedir a propietario que actualice proyecto: ir a branch > mi rama > new pull request > pedimos a usuario principal habilitar merge titulo y descripcion de ajustes
+
+El que autoriza: vamos al repositorio > pull reques de epstaña arriba > click en rama 
+> para revisar add you review en esquina superior derecha 
+> review changes en esquina superior derecha > approve o que haga nuevos cambios > submit review > vamos a code y vemos las ramas que se unieron
+
+Eliminar rama despues de que se hicieron cambios: ubicarse en master (importante porque desde la carpeta raiz no permite cambios)
+> git branch -d login (login es nombre de rama)
+
+para verificar si se elimino: git branch y ver que solo este rama master > para subir a git es git push origin :login (login es nombre de rama)
